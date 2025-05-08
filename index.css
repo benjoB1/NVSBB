@@ -1,0 +1,189 @@
+/* Grundlegende Seite und Layout-Stile */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 40px;
+}
+
+/* Titel */
+.card-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a3c87;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+/* Frage Styling */
+#question {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Optionen für Antworten */
+#options button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    background: #f7fafc;
+    color: #2d3748;
+    transition: all 0.3s ease;
+}
+
+#options button:hover {
+    background: #4c6ef5;
+    color: #ffffff;
+    border-color: #4c6ef5;
+    transform: translateY(-2px);
+}
+
+#options button:disabled {
+    background: #edf2f7;
+    color: #a0aec0;
+    border-color: #edf2f7;
+    cursor: not-allowed;
+}
+
+/* Nächster Button */
+#nextButton {
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    background: #4c6ef5;
+    border: none;
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+#nextButton:hover {
+    background: #3b5bdb;
+}
+
+/* Witzbereich */
+#joke-output {
+    font-size: 1.2rem;
+    background: #fefcbf;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+#joke-text {
+    font-size: 1.4rem;
+    color: #744210;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Stil für den Witz-Button */
+#getJokeButton {
+    font-size: 1.2rem;
+    padding: 12px 40px;
+    border-radius: 12px;
+    background: #38b2ac;
+    color: #ffffff;
+    border: none;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#getJokeButton:hover {
+    background: #2c7a7b;
+    transform: translateY(-2px);
+}
+
+/* Ergebnisbereich */
+#result-container {
+    text-align: center;
+    animation: fadeIn 0 0.5s ease;
+}
+
+#result-container h3 {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+/* Animationen */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsives Design */
+@media (max-width: 576px) {
+    .container {
+        margin: 20px auto;
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+
+    .card-title {
+        font-size: 2rem;
+    }
+
+    #question {
+        font-size: 1.2rem;
+    }
+
+    #options button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    #nextButton {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #getJokeButton {
+        font-size: 1.1rem;
+        padding: 10px 30px;
+    }
+
+    #joke-text {
+        font-size: 1.2rem;
+    }
+}
