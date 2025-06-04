@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker</h1>
+    </header>
+    <main>
+        <section id="stats">
+            <h2>Deine Statistiken</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Schritte</h3>
+                    <p id="step-count">Schritte: 0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Kalorien</h3>
+                    <p id="calories-burned">Kalorien: 0 kcal</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Distanz</h3>
+                    <p id="distance-covered">Distanz: 0 m</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Standort</h3>
+                    <p id="location-info">Standort: Nicht verfügbar</p>
+                </div>
+            </div>
+            <canvas id="steps-chart" height="100"></canvas>
+        </section>
+        <section id="workout">
+            <h2>Workout Steuerung</h2>
+            <select id="workout-select">
+                <option value="jogging">Joggen</option>
+                <option value="cycling">Radfahren</option>
+                <option value="strength">Krafttraining</option>
+                <option value="swimming">Schwimmen</option>
+                <option value="yoga">Yoga</option>
+                <option value="hiit">HIIT</option>
+            </select>
+            <div class="workout-controls">
+                <button id="start-workout">Workout starten</button>
+                <button id="pause-workout" disabled>Pausieren</button>
+                <button id="stop-workout" disabled>Beenden</button>
+            </div>
+            <p id="workout-timer">Verstrichene Zeit: 00:00</p>
+        </section>
+        <section id="notifications">
+            <h2>Erinnerungen</h2>
+            <label for="notification-time">Wann möchtest du eine Erinnerung?</label>
+            <input type="time" id="notification-time" required>
+            <button id="set-reminder">Erinnerung einstellen</button>
+        </section>
+        <section id="history">
+            <h2>Workout Verlauf</h2>
+            <ul id="workout-history"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Fitness Tracker App</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
